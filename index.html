@@ -7,5 +7,29 @@
 	<body>
 		<h1>这是我用github创建的第一个个人站点</h1>
 		<i>test</i>
+		<script>
+			var arr1 = new Array(1,2,3);
+			
+			function Info(name, sex) {
+				this.name = name;
+				this.sex = sex;
+			}
+			Object.prototype.walk = function() {
+					console.log("走");
+			}
+			//protoType只有在 构造函数(对象)才有
+			//_proto_只有构造出来的实例才有
+			
+			var p1 = new Info();
+			
+			
+			console.log(p1.walk);
+			console.log(p1);
+			// 
+			console.log(arr1);
+//			console.log(arr2);
+//			console.log(arr3);
+			
+		</script>
 	</body>
 </html>

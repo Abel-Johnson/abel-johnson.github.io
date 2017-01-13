@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<title></title>
+		<meta charset="utf-8" />
+		<title>张翔简历</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/tool.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<!--[if lt IE 8]
+			<link rel="stylesheet" href="css/fix.css" />
+		<![endif]-->
 	</head>
 	<body>
-		<h1>这是我用github创建的第一个个人站点</h1>
-		<i>test</i>
-		<script>
-			var arr1 = new Array(1,2,3);
-			
-			function Info(name, sex) {
-				this.name = name;
-				this.sex = sex;
-			}
-			Object.prototype.walk = function() {
-					console.log("走");
-			}
-			//protoType只有在 构造函数(对象)才有
-			//_proto_只有构造出来的实例才有
-			
-			var p1 = new Info();
-			
-			
-			console.log(p1.walk);
-			console.log(p1);
-			// 
-			console.log(arr1);
-//			console.log(arr2);
-//			console.log(arr3);
-			
-		</script>
+		<div id="box">
+			<header id="head">
+				<div id="head_title">
+					<div class="wrap">
+						<h3 id="name">张翔</h3>
+						<em id="career">前端开发工程师</em>
+						<div class="contact">
+							<span class="code_qq">
+								<i class="ico"></i>
+								<span>734157604</span>
+							</span>
+							<a href=mailto:734157604@qq.com class="address_email">
+								<i class="ico"></i>
+								<span>734157604@qq.com</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div id="head_detail">
+					<div class="wrap clearfix">
+						<p class="motto">
+							<span class="fz_60 fl">“</span>
+							<span class="motto_text fr">
+								活着，是一种修行。修行就是修心。修得一颗平常心，无时不是快乐
+							<span class="fz_60">”</span>
+							</span>
+						</p>
+					</div>
+				</div>
+			</header>
+			<div id="content"></div>
+			<footer id="foot"></footer>
+		</div>
 	</body>
 </html>

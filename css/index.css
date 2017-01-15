@@ -1,5 +1,6 @@
 body{
-	font-family: tahoma,arial,helvetica;
+	font-family: tahoma,'microsoft yahei',helvetica;
+	/*"microsoft yahei"和arial看起来是一样的*/
 }
 #head{}
 #head_title{

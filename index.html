@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+<!--效果还可以参考艺龙-->
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>张翔简历xx</title>
+		<title>张翔简历</title>
 		<link href="img/bitbug_favicon.ico" rel="shortcut icon" />
 		<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.css"/>
 		<link rel="stylesheet" href="css/reset.css" />
@@ -11,40 +12,110 @@
 		<!--[if lt IE 8]
 			<link rel="stylesheet" href="css/fix.css" />
 		<![endif]-->
+		<script src="js/jq3.js"></script>
 	</head>
 	<body>
-		<div id="box">
-			<header id="head">
-				<div id="head_title">
-					<div class="wrap">
-						<h3 id="name">张翔</h3>
-						<em id="career">前端开发工程师</em>
-						<div class="contact">
-							<span class="code_qq">
-								<i class="ico"></i>
-								<span>734157604</span>
+		<div id="info">
+			<!--<div class="bgblur">
+				
+			</div>-->
+			<div id="infoBasic">
+				<div class="wrap">
+					<div class="headTitle">
+						<strong class="name">张翔</strong>
+						<em class="job">前端开发工程师</em>
+					</div>
+					<ul class="contactMe">
+						<li class="address_qq">
+							<span>
+								<i class="fa fa-qq"></i>
+								<span class="word">734157604</span>
 							</span>
-							<a href=mailto:734157604@qq.com class="address_email">
-								<i class="ico"></i>
-								<span>734157604@qq.com</span>
+						</li>
+						<li class="address_email">
+							<a href="mailto:734157604@qq.com">
+								<i class="fa fa-envelope"></i>
+								<span class="word">734157604@qq.com</span>
 							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="infoDetail">
+				<div class="wrap">
+					<div class="photo">
+						<img src="img/real_photo.jpg"/>
+					</div>
+					<div class="motto">
+						<blockquote class="text">
+							似水流年, 时间, 就是这样在岁月中沧桑着人生, 也苍老着一个人的生命, 却无法改变因此留下的, 那一路难以忘怀的记忆
+						</blockquote>
+					</div>
+					<div class="infoLs">
+						<dl class="item">
+							<dt class="li_title">手机</dt>
+							<dd class="li_content">18811572301</dd>
+						</dl>
+						<dl class="item">
+							<dt class="li_title">年龄</dt>
+							<dd class="li_content">23</dd>
+						</dl>
+						<dl class="item">
+							<dt class="li_title">所在地</dt>
+							<dd class="li_content">北京市海淀区</dd>
+						</dl>
+						<dl class="item">
+							<dt class="li_title">学历</dt>
+							<dd class="li_content">本科</dd>
+						</dl>
+						<dl class="item">
+							<dt class="li_title">毕业院校</dt>
+							<dd class="li_content">太原理工大学</dd>
+						</dl>
+						<dl class="item">
+							<dt class="li_title">兴趣爱好</dt>
+							<dd class="li_content">电影,网球,读书,象棋</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="abilityShow">
+			<div class="wrap">
+				<div class="ab_head">
+					<h3 class="title">技能展示</h3>
+					<em class="desc">编写艺术般的代码</em>	
+				</div>
+				<div class="ab_content clearfix">
+					<div class="word">
+						<dl class="item">
+							<dt>HTML5 - 60%</dt>
+							<dd>移动端</dd>
+							<dd>响应式</dd>
+							<dd>canvas特效</dd>
+						</dl>
+						<dl class="item">
+							<dt>CSS3 - 60%</dt>
+							<dd>3D效果</dd>
+							<dd>阴影&渐变</dd>
+							<dd>滤镜</dd>
+						</dl>
+						<dl class="item">
+							<dt>JavaScript - 80%</dt>
+							<dd>	JavaScript一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在HTML（标准通用标记语言下的一个应用）网页上使用，用来给HTML网页增加动态功能。</dd>
+						</dl>
+						<div class="pages">
+							<i class="dot active"></i>
+							<i class="dot"></i>
+							<i class="dot"></i>
 						</div>
 					</div>
-				</div>
-				<div id="head_detail">
-					<div class="wrap clearfix">
-						<p class="motto">
-							<span class="fz_60 fl">“</span>
-							<span class="motto_text fr">
-								活着，是一种修行。修行就是修心。修得一颗平常心，无时不是快乐
-							<span class="fz_60">”</span>
-							</span>
-						</p>
+					<div class="chart">
+						<canvas id="circle" width="590px" height="590px">aa</canvas>
 					</div>
 				</div>
-			</header>
-			<div id="content"></div>
-			<footer id="foot"></footer>
+			</div>
 		</div>
+		<script src="js/index.js"></script>
 	</body>
 </html>

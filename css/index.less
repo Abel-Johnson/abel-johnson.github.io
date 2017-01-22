@@ -2,14 +2,14 @@ body{
 	font-family: "microsoft yahei",tahoma,arial,helvetica;
 }
 #info{
-	background: url(../img/header_peoplejump.jpg) no-repeat;
-	background-size: 100% 100%;
+	background: url(../img/header_bg.jpg) repeat-x;
+	background-size: auto 100%;
 //	filter:grayscale(1);
 }
 #infoBasic{
 	height: 100px;
 	border-bottom: 1px solid #3c313d;
-	background-color: rgba(0,0,0,.7);
+	background-color: rgba(0,0,0,.8);
 	.headTitle{
 		float: left;
 		word-spacing: 6px;
@@ -54,11 +54,11 @@ body{
 }
 #infoDetail{
 	height: 350px;
-	background-color: rgba(0,0,0,.8);
+	background-color: rgba(10,10,10,.8);
 	position: relative;
 	.motto{
+		height: 350px;
 		width: 340px;
-		margin-top: 140px;
 		float: left;
 		line-height: 24px;
 		font-size: 14px;
@@ -79,12 +79,13 @@ body{
 		}
 		.text:after{
 			display: inline-block;
-			vertical-align: text-top;
+			vertical-align: top;
+			height: 0;
 			font-size: 60px;
 			line-height: 200px;
 			content: "\”";
 			font-family: "Khmer Sangam MN";
-			margin-top: -64px;
+			margin-top: -60px;
 			color: #4e5055;
 			margin-left: 4px;
 		}
@@ -132,7 +133,6 @@ body{
 			}
 			.li_content:before{
 				content: '';
-				display: inline-block;
 				float: left;
 				width: 8px;
 				height: 8px;

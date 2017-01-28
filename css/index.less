@@ -144,35 +144,47 @@ body{
 	}
 }
 .module_head{
-		height: 100px;
-		padding-top: 40px;
-		text-align: center;
-		.title{
-			font-size: 36px;
-			line-height: 40px;
-			
-			font-weight: 100;
-		}
-		.desc{
-			font-size: 16px;
-			line-height: 36px;
-			
-		}
+	height: 100px;
+	padding-top: 40px;
+	text-align: center;
+	.title{
+		font-size: 36px;
+		line-height: 40px;
+		
+		font-weight: 100;
+	}
+	.desc{
+		font-size: 16px;
+		line-height: 36px;
+		
+	}
 }
 #abilityShow{
-	height: 790px;
+	height: 750px;
 	border-bottom: 2px solid #fff;  
 	background-color: #eef2f5;
+	padding-bottom: 50px;
 
 	.ab_head{
 		.title{color: #985a99;}
 		.desc{color: #999999;}
 	}
 	.ab_content{
-		padding-bottom: 50px;
+		height: 610px;
 		.word{
+			position: relative;
 			float: left;
 			width: 370px;
+			height: 100%;
+			.list{
+				transition: 3s;
+				opacity: 0;
+				display: none;
+			}
+			.list.active{
+				opacity: 1;
+				display: block;
+			}
 			.item{
 				padding-left: 30px;
 				margin-bottom: 38px;
@@ -204,14 +216,19 @@ body{
 				color: #985a99;
 			}
 			.pages{
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				
 				text-align: center;
 				line-height: 70px;
 				height: 70px;
-				word-spacing: 10px;
 				.dot{
 					display: inline-block;
 					width: 18px;
 					height: 18px;
+					margin: 0 8px;
 					border-radius: 50%;
 					background-color: #ccb5d0;
 				}
@@ -223,6 +240,7 @@ body{
 		.chart{
 			float: right;
 			width: 590px;
+			height: 100%;
 		}
 	}
 }
@@ -237,13 +255,46 @@ body{
 	}
 	
 	.ds_content{
+		height: 460px;
+		.container{
+			float: left;
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+		}
+		.scrollBar{
+			width: 10px;
+			height: 460px;
+			float: right;
+			background: #d5d7db;
+			position: relative;
+			.barDiv{
+				position: absolute;
+				background: #e4877e;
+				width: 10px;
+				height: 30px;
+				top: 0;
+				left: 0;
+			}
+		}
+		.folderLis{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
 		.folderLis>li{
 			margin-bottom: 10px;
 		}
 		.demo_list{
-			margin-right: 20px;
 			width: 360px;
+			height: 100%;
 			float: left;
+			margin-right: 20px;
+			.container{
+				width: 340px;
+			}
+			
 			.folder{
 				background: #e4877e;
 				color: #fff;
@@ -261,7 +312,10 @@ body{
 				line-height: 22px;
 				text-align: center;
 				font-size: 24px;
-				margin: 0 10px;
+				margin: 0 6px 0 10px; 
+			}
+			.folder.active:before{
+				content: "-";
 			}
 			.demo{
 				padding-left: 44px;
@@ -297,10 +351,17 @@ body{
 		}
 		.demo_detail{
 			float: left;
-			width: 620px;
-			padding: 30px;
-			box-sizing: border-box;
-			background-color: white;
+			width: 600px;
+			height: 100%;
+			.container{
+				width: 580px;
+				background-color: white;
+			}
+			
+			.demoDesc{
+				padding: 30px;
+				position: absolute;
+			}
 			.head{
 				margin-bottom: 10px;
 				strong{
@@ -319,18 +380,18 @@ body{
 			.content{
 				border-top: 1px dashed #d8d8d8;
 				margin-bottom: 20px;
+				
 				p{
+					padding: 16px 0;
 					font-size: 14px;
-					line-height: 48px;
+					line-height: 30px;
 					color: #777879;
 				}
 				.thumbnail{
-					width: 559px;
-					height: 172px;
 					box-shadow: 1px 1px 4px 1px rgba(0,0,0,.4);
 					img{
 						width: 100%;
-						height: 100%;
+						height: auto;
 					}
 				}
 			}
@@ -356,19 +417,6 @@ body{
 					span{
 						font-size: 14px;
 					}
-//					span:hover{
-//						color: #999999;
-//					}
-					
-
-//					<i class="fa fa-weibo"></i>
-//					<i class="fa fa-facebook"></i>
-//					<!--<i class="fa fa-get-pocket"></i>
-//					<i class="fa fa-free-code-camp"></i>
-//					<i class="fa fa-github"></i>-->
-//					<i class="fa fa-google-plus"></i>
-//					<i class="fa fa-renren"></i>
-//					<i class="fa fa-weixin"></i>
 
 					.fa{
 						width: 32px;
@@ -390,7 +438,7 @@ body{
 						background: #eed03e;
 					}
 					.fa:nth-of-type(4):hover{
-						background: #1362a7;
+						background: #227dc5;
 					}
 					.fa:nth-of-type(5):hover{
 						background: #4ac22d;
@@ -423,6 +471,7 @@ body{
 					line-height: 30px;
 					color: #fff;
 					display: block;
+					font-weight: 100;
 				}
 				time{
 					font-size: 16px;
@@ -446,15 +495,19 @@ body{
 						font-size: 14px;
 						border: 1px solid #bc5045;
 						border-radius: 2px;
+						margin-right: 8px;
 					}
 					span.tag-html{
 						color: #b93d5f;
 					}
-					span.tag-javascript{
+					span.tag-js{
 						color: #4b4b9c;
 					}
 					span.tag-css{
 						color: #985a99;
+					}
+					span.tag-css3{
+						color: #e4877e;
 					}
 				}
 			}

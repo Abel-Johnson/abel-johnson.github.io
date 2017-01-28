@@ -159,9 +159,10 @@ body {
   line-height: 36px;
 }
 #abilityShow {
-  height: 790px;
+  height: 750px;
   border-bottom: 2px solid #fff;
   background-color: #eef2f5;
+  padding-bottom: 50px;
 }
 #abilityShow .ab_head .title {
   color: #985a99;
@@ -170,11 +171,22 @@ body {
   color: #999999;
 }
 #abilityShow .ab_content {
-  padding-bottom: 50px;
+  height: 610px;
 }
 #abilityShow .ab_content .word {
+  position: relative;
   float: left;
   width: 370px;
+  height: 100%;
+}
+#abilityShow .ab_content .word .list {
+  transition: 3s;
+  opacity: 0;
+  display: none;
+}
+#abilityShow .ab_content .word .list.active {
+  opacity: 1;
+  display: block;
 }
 #abilityShow .ab_content .word .item {
   padding-left: 30px;
@@ -207,15 +219,19 @@ body {
   color: #985a99;
 }
 #abilityShow .ab_content .word .pages {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   text-align: center;
   line-height: 70px;
   height: 70px;
-  word-spacing: 10px;
 }
 #abilityShow .ab_content .word .pages .dot {
   display: inline-block;
   width: 18px;
   height: 18px;
+  margin: 0 8px;
   border-radius: 50%;
   background-color: #ccb5d0;
 }
@@ -225,6 +241,7 @@ body {
 #abilityShow .ab_content .chart {
   float: right;
   width: 590px;
+  height: 100%;
 }
 #demosShow {
   background: #f8f9f9;
@@ -233,13 +250,47 @@ body {
 #demosShow .ds_head .title {
   color: #b93d5f;
 }
+#demosShow .ds_content {
+  height: 460px;
+}
+#demosShow .ds_content .container {
+  float: left;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#demosShow .ds_content .scrollBar {
+  width: 10px;
+  height: 460px;
+  float: right;
+  background: #d5d7db;
+  position: relative;
+}
+#demosShow .ds_content .scrollBar .barDiv {
+  position: absolute;
+  background: #e4877e;
+  width: 10px;
+  height: 30px;
+  top: 0;
+  left: 0;
+}
+#demosShow .ds_content .folderLis {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 #demosShow .ds_content .folderLis > li {
   margin-bottom: 10px;
 }
 #demosShow .ds_content .demo_list {
-  margin-right: 20px;
   width: 360px;
+  height: 100%;
   float: left;
+  margin-right: 20px;
+}
+#demosShow .ds_content .demo_list .container {
+  width: 340px;
 }
 #demosShow .ds_content .demo_list .folder {
   background: #e4877e;
@@ -258,7 +309,10 @@ body {
   line-height: 22px;
   text-align: center;
   font-size: 24px;
-  margin: 0 10px;
+  margin: 0 6px 0 10px;
+}
+#demosShow .ds_content .demo_list .folder.active:before {
+  content: "-";
 }
 #demosShow .ds_content .demo_list .demo {
   padding-left: 44px;
@@ -293,10 +347,16 @@ body {
 }
 #demosShow .ds_content .demo_detail {
   float: left;
-  width: 620px;
-  padding: 30px;
-  box-sizing: border-box;
+  width: 600px;
+  height: 100%;
+}
+#demosShow .ds_content .demo_detail .container {
+  width: 580px;
   background-color: white;
+}
+#demosShow .ds_content .demo_detail .demoDesc {
+  padding: 30px;
+  position: absolute;
 }
 #demosShow .ds_content .demo_detail .head {
   margin-bottom: 10px;
@@ -318,18 +378,17 @@ body {
   margin-bottom: 20px;
 }
 #demosShow .ds_content .demo_detail .content p {
+  padding: 16px 0;
   font-size: 14px;
-  line-height: 48px;
+  line-height: 30px;
   color: #777879;
 }
 #demosShow .ds_content .demo_detail .content .thumbnail {
-  width: 559px;
-  height: 172px;
   box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.4);
 }
 #demosShow .ds_content .demo_detail .content .thumbnail img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 #demosShow .ds_content .demo_detail .foot {
   height: 40px;
@@ -373,7 +432,7 @@ body {
   background: #eed03e;
 }
 #demosShow .ds_content .demo_detail .foot .shareBox .fa:nth-of-type(4):hover {
-  background: #1362a7;
+  background: #227dc5;
 }
 #demosShow .ds_content .demo_detail .foot .shareBox .fa:nth-of-type(5):hover {
   background: #4ac22d;
@@ -401,6 +460,7 @@ body {
   line-height: 30px;
   color: #fff;
   display: block;
+  font-weight: 100;
 }
 #projectShow .ps_content .item .summary time {
   font-size: 16px;
@@ -422,15 +482,19 @@ body {
   font-size: 14px;
   border: 1px solid #bc5045;
   border-radius: 2px;
+  margin-right: 8px;
 }
 #projectShow .ps_content .item .summary .tags span.tag-html {
   color: #b93d5f;
 }
-#projectShow .ps_content .item .summary .tags span.tag-javascript {
+#projectShow .ps_content .item .summary .tags span.tag-js {
   color: #4b4b9c;
 }
 #projectShow .ps_content .item .summary .tags span.tag-css {
   color: #985a99;
+}
+#projectShow .ps_content .item .summary .tags span.tag-css3 {
+  color: #e4877e;
 }
 #projectShow .ps_content .item .poster {
   width: 330px;

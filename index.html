@@ -14,6 +14,7 @@
 		<![endif]-->
 		<script src="js/jq3.js"></script>
 		<script src="js/vue.js"></script>
+		<script src="js/data.js"></script>
 	</head>
 	<body>
 		<div id="info">
@@ -30,13 +31,13 @@
 						<li class="address_qq">
 							<span>
 								<i class="fa fa-qq"></i>
-								<span class="word">734157604</span>
+								<span class="">734157604</span>
 							</span>
 						</li>
 						<li class="address_email">
 							<a href="mailto:734157604@qq.com">
 								<i class="fa fa-envelope"></i>
-								<span class="word">734157604@qq.com</span>
+								<span class="">734157604@qq.com</span>
 							</a>
 						</li>
 					</ul>
@@ -94,26 +95,15 @@
 				</div>
 				<div class="ab_content clearfix">
 					<div class="word">
-						<dl class="item">
-							<dt>HTML5 - 60%</dt>
-							<dd>移动端</dd>
-							<dd>响应式</dd>
-							<dd>canvas特效</dd>
-						</dl>
-						<dl class="item">
-							<dt>CSS3 - 60%</dt>
-							<dd>3D效果</dd>
-							<dd>阴影&渐变</dd>
-							<dd>滤镜</dd>
-						</dl>
-						<dl class="item">
-							<dt>JavaScript - 80%</dt>
-							<dd>	JavaScript一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在HTML（标准通用标记语言下的一个应用）网页上使用，用来给HTML网页增加动态功能。</dd>
-						</dl>
+						<div class="list" :class="{'active':(index===showPageIndex)}" v-for='code,index of pageNum'>
+							<dl class="item" v-for='val,index of list' v-if='index<(code*3) && index>=(code-1)*3'>
+								<dt>{{val.language}} - {{val.percent}}</dt>
+								<dd v-for='item in val.tips'>{{item}}</dd>
+							</dl>
+						</div>
+							
 						<div class="pages">
-							<i class="dot active"></i>
-							<i class="dot"></i>
-							<i class="dot"></i>
+							<i class="dot" @mouseover="changePage(index)" v-for='num,index of pageNum' :class="{'active':(index===showPageIndex)}"></i>
 						</div>
 					</div>
 					<div class="chart">
@@ -131,77 +121,60 @@
 				</div>
 				<div class="ds_content clearfix">
 					<div class="demo_list">
-						<ul class="folderLis">
-							<li>
-								<h4 class="folder">小demo系列(1)</h4>
-								<ul>
-									<li>
-										<h5 class="demo">图片轮播图</h5>
-									</li>
-									<li>
-										<h5 class="demo active">下拉菜单</h5>
-									</li>
-									<li>
-										<h5 class="demo">无缝滚动</h5>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<h4 class="folder">小demo系列(2)</h4>
-								<ul>
-									<!--<li>
-										<h5 class="demo">图片轮播图</h5>
-									</li>
-									<li>
-										<h5 class="demo">下拉菜单</h5>
-									</li>
-									<li>
-										<h5 class="demo">无缝滚动</h5>
-									</li>-->
-								</ul>
-							</li>
-							<li>
-								<h4 class="folder">小demo系列(3)</h4>
-								<ul>
-									<!--<li>
-										<h5 class="demo">图片轮播图</h5>
-									</li>
-									<li>
-										<h5 class="demo">下拉菜单</h5>
-									</li>
-									<li>
-										<h5 class="demo">无缝滚动</h5>
-									</li>-->
-								</ul>
-							</li>
-						</ul>
+						<div class="container">
+							<ul class="folderLis" :ref="'folderLis'">
+								<li v-for="item,index in list">
+									<h4 class="folder" @click='switchFolder(item,index)' :class="{'active':item.isOpen}">
+										{{item.caseName}}({{item.caseList.length}})
+									</h4>
+									<ul v-show="item.isOpen">
+										<li v-for='li of item.caseList'>
+											<h5 class="demo" @click="showDetail(li)" :class="{active: currentCaseObj===li}">{{li.caseTitle}}</h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						
+						<div class="scrollBar">
+							<div class="barDiv"></div>
+						</div>
+						
 					</div>
+					
 					<div class="demo_detail">
-						<header class="head">
-							<strong>下拉菜单</strong>
-							<time>发布时间: 2017-02-20 22:00</time>
-						</header>
-						<div class="content">
-							<p>这是我在学习Js时的一个小练习,综合运用了JS的元素获取,运动框架等方式完成</p>
-							<div class="thumbnail">
-								<img src="img/缩略图站位.png"/>
+						<div class="container">
+							<div class="demoDesc" :ref="'demoDesc'">
+								<header class="head">
+									<strong>{{currentCaseObj.caseTitle}}</strong>
+									<time>{{currentCaseObj.publishTime}}</time>
+								</header>
+								<div class="content">
+									<p>{{currentCaseObj.caseDescription}}</p>
+									<div class="thumbnail">
+										<img :src='currentCaseObj.caseThumbnail' @load='imgFinish'/>
+									</div>
+								</div>
+								<footer class="foot clearfix">
+									<a :href="currentCaseObj.caseWebsite" class="enter">点击预览</a>
+									<div class="shareBox">
+										分享至: 
+										<i class="fa fa-weibo"></i>
+										<i class="fa fa-facebook"></i>
+										<i class="fa fa-google-plus"></i>
+										<i class="fa fa-renren"></i>
+										<i class="fa fa-weixin"></i>
+										<!--<i class="fa fa-get-pocket"></i>
+										<i class="fa fa-free-code-camp"></i>
+										<i class="fa fa-github"></i>-->
+									</div>
+								</footer>
 							</div>
 						</div>
-						<footer class="foot clearfix">
-							<a href="" class="enter">点击预览</a>
-							<div class="shareBox">
-								<span>分享至: </span>
-								<i class="fa fa-weibo"></i>
-								<i class="fa fa-facebook"></i>
-								<!--<i class="fa fa-get-pocket"></i>
-								<i class="fa fa-free-code-camp"></i>
-								<i class="fa fa-github"></i>-->
-								<i class="fa fa-google-plus"></i>
-								<i class="fa fa-renren"></i>
-								<i class="fa fa-weixin"></i>
-							</div>
-						</footer>
 						
+						<div class="scrollBar">
+							<div class="barDiv"></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -218,25 +191,24 @@
 			</div>
 			<div class="ps_content clearfix">
 				<ul class="projLis">
-					<li class="item">
+					<li class="item" v-for="item of list">
 						<div class="wrap clearfix">
 							<div class="summary">
-								<strong class="name">56网PC视频播放页</strong>
-								<time>2013.12.11 ~ 2014.10.11</time>
-								<p>用户观看视频的主页面，其大部分内容是通过JS加载的。为了提高性能，采用了延迟加载、延迟渲染、事件代理等优化方式。<br />
-	此外，还通过监听页面的window.onerror事件对异常信息进行采集，以便及时发现和排查故障。</p>
+								<a :href="item.projectWebsite" class="name">{{item.projectName}}</a>
+								<time>{{item.startTime}}</time>
+								<p>{{item.projectExplain}}</p>
 								<div class="tags">
-									<span class="tag-html">HTML</span>
-									<span class="tag-javascript">Javascript</span>
-									<span class="tag-css">CSS</span>
+									<span v-for="tag of item.projectLabel" :class="'tag-'+tag">{{tag}}</span>
+									<!--<span class="tag-javascript">Javascript</span>
+									<span class="tag-css">CSS</span>-->
 								</div>
 							</div>
 							<div class="poster">
-								<img src="img/poster1.png"/>
+								<a :href="item.projectWebsite"><img :src="item.projectThumbnail"/></a>
 							</div>
 						</div>
 					</li>
-					<li class="item">
+					<!--<li class="item">
 						<div class="wrap clearfix">
 							<div class="summary">
 								<strong class="name">56网PC视频播放页</strong>
@@ -253,7 +225,7 @@
 								<img src="img/poster2.png"/>
 							</div>
 						</div>
-					</li>
+					</li>-->
 				</ul>
 			</div>
 			

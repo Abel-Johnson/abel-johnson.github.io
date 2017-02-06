@@ -2,54 +2,85 @@ var skillLis = {
 	showType:"circle",
 	content:[
 	{
-		language:"html5",
-		percent:"6%",
+		language:"HTML",
+		percent:"95%",
 		tips:[
-			"熟练掌握各类语义化标签",
-			"熟悉对各种标签特性及其相互转换",
-			"H5拖拽、视频音频",
-			"表格，H5新增表单等……"
+			"熟练根据页面结构应用各类语义化标签",
+			"熟悉H5新增标签",
+			"掌握SVG,Canvas配合js绘制基本图形"
 		]
 	},
 	{
-		language:"CSS3",
-		percent:"90%",
+		language:"CSS",
+		percent:"95%",
 		tips:[
-			"掌握浮动及文档流特性",
-			"精通定位、浏览器兼容性",
 			"CSS3圆角阴影字体等样式有实际案例经验",
-			"移动端响应式"
+			"掌握移动端/响应式/弹性盒模型flex等多终端适配解决方法",
+			"使用合适的结构编写兼容主流浏览器的页面布局(模仿过携程[三屏页面],QQ音乐等大型网站的静态页面)"
 		]
 	},
 	{
-		language:"javascript",
-		percent:"86%",
+		language:"JavaScript",
+		percent:"90%",
 		tips:[
 			"了解数据类型、作用域闭包等语言特性",
 			"掌握定时器、数组字符串及递归、数组去重等",
-			"深入使用DOM\BOM\EVENT，能完成各类组件开发",
+			"深入使用DOM\BOM，能完成各类组件开发",
 			"掌握JS的数据调用、ajax实现机制、各类接口调用",
 			"掌握面向对象编程，对封装、继承、多态等均有了解",
-			"了解正则表达式，熟悉JS兼容性、JS性能提升"
+			"了解正则表达式，熟悉JS兼容性、JS性能提升",
+			"熟练掌握原生js,能够脱离jQuery等类库编码",
+			"了解ECMAScript6(2015)的新增语法"
 		]
 	},
 	{
-		language:"canvas",
-		percent:"40%",
+		language:"Canvas",
+		percent:"70%",
 		tips:[
-			"能熟练使用相关接口绘制各类图形",
-			"能运用canvas开发小游戏",
-			"可封装小型图表等数据可视化技术解决方案"
+			"能熟练配合js使用相关接口绘制各类图形",
+			"能运用canvas开发小游戏"
+		]
+	},
+	{
+		language:"Vue",
+		percent:"80%",
+		tips:[
+			"熟练使用Vue这种MVVM框架提供的'v-','@',':'等各种数据绑定指令",
+			"熟练使用框架提供的各种API,进行组件开发"
 		]
 	},
 	{
 		language:"jQuery",
+		percent:"80%",
+		tips:[
+			"熟练使用jquery提供的各种常用方法",
+			"能够自己封装常用jQuery扩展插件",
+			"了解部分功能实现原理,如jQuery的无new实例化的实现原理等"
+		]
+	},
+	{
+		language:"Java",
 		percent:"60%",
 		tips:[
-			"移动端响应式",
-			"canvas游戏开发"
+			"了解一些后端语言Java",
+			"了解一定的移动端Android开发知识"
+		]
+	},
+	{
+		language:"Node.js",
+		percent:"70%",
+		tips:[
+			"了解服务端Node.js"
+		]
+	},
+	{
+		language:"webpack/grunt",
+		percent:"80%",
+		tips:[
+			"能够使用各种打包工具"
 		]
 	}
+
 	]
 }
 
@@ -281,7 +312,7 @@ var cases = [
 var projects = [
 		{
 			projectName:"整屏切换+动画制作“TweenMax库”",
-			projectWebsite:"http://2013.miaov.com/miaov_demo/diagnosite/",
+			projectWebsite:"",
 		    startTime:"2016.01.01",
 			endTime:"至今",
 			projectExplain:"JS整站开发之：整屏切换+动画制作神器“TweenMax库” 导航条和首屏出场动画、3D翻转实现、整屏切换，页面动画计算滚动条滚动距离， 拖动滚动条触发页面动画，完善每一屏内的图片翻转，缩小浏览器，做布局转换。",
@@ -289,8 +320,8 @@ var projects = [
 			projectThumbnail:"images/icon/1.png"
 		},
 		{
-			projectName:"妙味VIP会员感恩墙",
-			projectWebsite:"http://v.miaov.com/thanks/",
+			projectName:"xxx",
+			projectWebsite:"",
 		    startTime:"2016.01.01",
 			endTime:"至今",
 			projectExplain:"用户观看视频的主页面，其大部分内容是通过JS加载的。为了提高性能，采用了延迟加载、延迟渲染、事件代理等优化方式。此外，还通过监听页面的window.onerror事件对异常信息进行采集，以便及时发现和排查故障。",

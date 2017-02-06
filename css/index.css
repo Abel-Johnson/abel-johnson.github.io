@@ -111,7 +111,7 @@ body {
 #infoDetail .infoLs {
   padding-top: 90px;
   float: right;
-  width: 340px;
+  width: 300px;
   position: relative;
 }
 #infoDetail .infoLs .item:after {
@@ -131,8 +131,7 @@ body {
 }
 #infoDetail .infoLs .item .li_content {
   color: #c5cbd0;
-  float: right;
-  width: 260px;
+  float: left;
   padding-left: 20px;
 }
 #infoDetail .infoLs .item .li_content:before {
@@ -190,7 +189,7 @@ body {
 }
 #abilityShow .ab_content .word .item {
   padding-left: 30px;
-  margin-bottom: 38px;
+  margin-bottom: 30px;
 }
 #abilityShow .ab_content .word .item dt {
   position: relative;

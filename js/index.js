@@ -1,11 +1,28 @@
 var rad = Math.PI/180;
 var circle = $('#circle')[0];
 var ctx = circle.getContext("2d");
+var colorArr = ['#e26c60', '#b93d5f', '#985a99', '#4b4b9c', '#0987c2', '#09c0c2', '#3ebe3b', '#99c209', '#e0c857', '#e09857']
+
+// 左侧文字颜色
+// $('#abilityShow dd').each(function(index, value) {
+// 	console.log(index,value)
+// 	value.style.color = colorArr[index]
+// })
 
 
 //circles(0,2*Math.PI);
 //动画生成同心圆
 prepare(100, -90, 3)
+setTimeout(function(){
+		for (var i = 0; i < skillArr.length; i++) {
+			console.log("xxx",i);
+			console.log(colorArr)
+			dataShow(290-30*i,skillArr[i].perc,270,10*skillArr[i].perc,colorArr[i]);
+			
+		}
+//		dataShow(260,80,270,1000,"#ffff00");
+	},1500)
+
 function circles(start,end) {
 //	console.log(ctx);
 	ctx.strokeStyle = "#eef2f5";
@@ -96,46 +113,64 @@ function prepare(percent, startDeg, time) {
 		
 	},10)
 }
-function dataShow(radius, percent, startDeg, time, color) {
-	ctx.strokeStyle = "#eef2f5";
-	ctx.lineWidth = 2;
-	ctx.moveTo(294,294);
+function dataShow(radius, percent, startDeg, time, colorAttr) {
+
+	// ctx.beginPath();
+	console.log(color)
+	var color = colorAttr;
+	radius-=15;
+	ctx.strokeStyle = color;
+	ctx.lineWidth = 26;
+	// ctx.moveTo(294,294);
 
 	var i = 0;
 	var timer = setInterval(function(){
 		var start = startDeg*rad;
 		var end = startDeg*rad+percent/100*2*Math.PI/100*(++i)
 		
-		console.log(start,end);
+		// console.log(start,end);
 		if(end >= start+2*Math.PI*percent/100){
 			clearInterval(timer);
 		}
 		
-		ctx.beginPath()
-		ctx.moveTo(294,294);
-		ctx.fillStyle = color;
-		ctx.arc(294,294,radius,start,end,false)
-		ctx.stroke();
-		ctx.fill();
-		
-		ctx.beginPath()
-		ctx.moveTo(294,294);
+		ctx.beginPath();
+		ctx.moveTo(294,294-radius);
+		ctx.strokeStyle = color;
 		ctx.fillStyle = 'transparent';
-		ctx.arc(294,294,radius-30,start,end,false)
+		ctx.arc(294,294,radius,start,end,false)
 		ctx.stroke();
 		ctx.fill();
 	},10);
 }
 
 
-//$(document).click(function(){
-//	console.log("进入");
-//	setTimeout(function(){
-//		dataShow(290,90,270,1000,"#fffff0");
-//		dataShow(260,80,270,1000,"#ffff00");
-//	},2000)
-//});
 
+
+//获取到技能数据
+var skillArr = [];
+for (var i = 0; i < skillLis.content.length; i++) {
+	var item = {
+		index: i,
+		lang: skillLis.content[i].language,
+		perc: Number(skillLis.content[i].percent.substr(0,2))
+	}
+	skillArr.push(item);
+}
+console.log(skillArr);
+
+
+// $(document).click(function(){
+// 	console.log("进入");
+// 	setTimeout(function(){
+// 		for (var i = 0; i < skillArr.length; i++) {
+// 			console.log("xxx",i);
+// 			console.log(colorArr)
+// 			dataShow(290-30*i,skillArr[i].perc,270,10*skillArr[i].perc,colorArr[i]);
+			
+// 		}
+// //		dataShow(260,80,270,1000,"#ffff00");
+// 	},1000)
+// });
 
 
 //vue写技能部分
@@ -143,7 +178,8 @@ new Vue({
 	el: '.word',
 	data: {
 		list: skillLis.content,//获取到技能数组
-		showPageIndex: 0
+		showPageIndex: 0,
+		colorArr: colorArr
 	},
 	computed: {
 		pageNum: function(){

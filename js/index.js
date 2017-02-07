@@ -2,6 +2,18 @@ var rad = Math.PI/180;
 var circle = $('#circle')[0];
 var ctx = circle.getContext("2d");
 var colorArr = ['#e26c60', '#b93d5f', '#985a99', '#4b4b9c', '#0987c2', '#09c0c2', '#3ebe3b', '#99c209', '#e0c857', '#e09857']
+// var isReady = false;
+//获取到技能数据
+var skillArr = [];
+for (var i = 0; i < skillLis.content.length; i++) {
+	var item = {
+		index: i,
+		lang: skillLis.content[i].language,
+		perc: Number(skillLis.content[i].percent.substr(0,2))
+	}
+	skillArr.push(item);
+}
+console.log(skillArr);
 
 // 左侧文字颜色
 // $('#abilityShow dd').each(function(index, value) {
@@ -12,18 +24,9 @@ var colorArr = ['#e26c60', '#b93d5f', '#985a99', '#4b4b9c', '#0987c2', '#09c0c2'
 
 //circles(0,2*Math.PI);
 //动画生成同心圆
-$(function(){prepare(100, -90, 3)
-setTimeout(function(){
-	ctx.lineWidth = 26;
-		for (var i = 0; i < skillArr.length; i++) {
-			console.log("xxx",i);
-			console.log(colorArr)
-			dataShow(290-30*i,skillArr[i].perc,270,10*skillArr[i].perc,colorArr[i]);
-			
-		}
-//		dataShow(260,80,270,1000,"#ffff00");
-	},1800)})
-
+prepare(100, -90, 3)
+setTimeout(dataAnimation,3000)
+	
 function circles(start,end) {
 //	console.log(ctx);
 	ctx.strokeStyle = "#eef2f5";
@@ -93,7 +96,14 @@ function circles(start,end) {
 	ctx.stroke();
 	ctx.fill()
 }
-
+function dataAnimation() {
+	for (var i = 0; i < skillArr.length; i++) {
+			console.log("xxx",i);
+			console.log(colorArr)
+			dataShow(290-30*i,skillArr[i].perc,270,10*skillArr[i].perc,colorArr[i]);
+			
+	}
+}
 
 
 function prepare(percent, startDeg, time) {
@@ -109,6 +119,9 @@ function prepare(percent, startDeg, time) {
 //		console.log(start,end);
 		if(end >= start+2*Math.PI*percent/100){
 			clearInterval(timer);
+			ctx.lineWidth = 26;
+			console.log('背景圆盘准备好了')
+			// dataAnimation()
 		}
 		circles(start,end)
 		
@@ -147,17 +160,7 @@ function dataShow(radius, percent, startDeg, time, colorAttr) {
 
 
 
-//获取到技能数据
-var skillArr = [];
-for (var i = 0; i < skillLis.content.length; i++) {
-	var item = {
-		index: i,
-		lang: skillLis.content[i].language,
-		perc: Number(skillLis.content[i].percent.substr(0,2))
-	}
-	skillArr.push(item);
-}
-console.log(skillArr);
+
 
 
 // $(document).click(function(){

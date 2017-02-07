@@ -231,6 +231,7 @@ let vm = new Vue({
 			//把滚动条以及内容区移到顶部
 			$('.demo_detail .barDiv').css("top",0);
 			$('.demo_detail .demoDesc').css("top",0);
+			$('.demo_detail img').attr("src","");
 // --------
 			this.currentCaseObj = item;
 			

@@ -200,7 +200,7 @@
 						<div class="wrap clearfix">
 							<div class="summary">
 								<a :href="item.projectWebsite" class="name">{{item.projectName}}</a>
-								<time>{{item.startTime}}</time>
+								<time>{{item.startTime}}~{{item.endTime}}</time>
 								<p>{{item.projectExplain}}</p>
 								<div class="tags">
 									<span v-for="tag of item.projectLabel" :class="'tag-'+tag">{{tag}}</span>

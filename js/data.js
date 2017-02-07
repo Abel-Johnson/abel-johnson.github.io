@@ -221,6 +221,13 @@ var cases = [
 			caseName:"中型web应用",
 			caseList:[
 				{
+					caseTitle:"豆瓣书籍",
+					publishTime:"2016-1-14",
+					caseThumbnail:"img/case/douban.png",
+					caseDescription:"利用豆瓣API通过jsonp请求数据"
+					,caseWebsite:"https://abel-johnson.github.io/jsonpDouban/"
+				},
+				{
 					caseTitle:"TODO待办事项",
 					publishTime:"2016-12-20 22:08",
 					caseThumbnail:"img/case/todo.png",

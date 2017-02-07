@@ -519,6 +519,7 @@ body {
   float: right;
 }
 #projectShow .ps_content .item .poster img {
+  border-radius: 8px;
   width: 100%;
   height: 100%;
 }
@@ -529,7 +530,7 @@ body {
   color: #464646;
 }
 #pageFoot .lastTime {
-  line-height: 50px;
+  line-height: 40px;
   float: left;
 }
 #pageFoot .qr {

@@ -114,7 +114,7 @@ var cases = [
 				{
 					caseTitle:"文字3D折叠",
 					publishTime:"2016-8-4",
-					caseThumbnail:"img/case/specialLetter.png.png",
+					caseThumbnail:"img/case/specialLetter.png",
 					caseDescription:"功能:鼠标划过时文字会折叠到底下的槽里,充分用到了3D变换,配合transition,配合自定义属性实现",
 					caseWebsite:"https://abel-johnson.github.io/Demos/3DspecialLetter/"
 				}
@@ -241,7 +241,7 @@ var cases = [
 var projects = [
 		{
 			projectName:"仿云盘",
-			projectWebsite:"",
+			projectWebsite:"https://abel-johnson.github.io/weiyun/",
 		    startTime:"2016.12.10",
 			endTime:"2016.12.20",
 			projectExplain:"原生Javascript编写,实现了:基本的三栏同步(即左侧树形菜单,面包屑导航和内容区),多选,全选,鼠标框选,重命名,批量删除,新建文件夹,批量移动,操作状态弹框,实现了市面上网盘的大部分功能",
@@ -250,7 +250,7 @@ var projects = [
 		},
 		{
 			projectName:"TODO待办事项",
-			projectWebsite:"",
+			projectWebsite:"https://abel-johnson.github.io/TODO/",
 		    startTime:"2016.12.20",
 			endTime:"2016.12.24",
 			projectExplain:"技术要点:使用Vue编写,实现了事项列表的增,删,改,查,通过localStorage在本地存储数据,实现了关闭浏览器再次打开,列表的状态依然保留,通过修改hash值,配合onhashchange函数实现了3种状态切换时的显示变化",

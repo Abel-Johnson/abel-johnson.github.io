@@ -225,7 +225,7 @@ var cases = [
 					publishTime:"2016-1-14",
 					caseThumbnail:"img/case/douban.png",
 					caseDescription:"利用豆瓣API通过jsonp请求数据"
-					,caseWebsite:"https://abel-johnson.github.io/jsonpDouban/"
+					,caseWebsite:"https://abel-johnson.github.io/Demos/jsonpDouban/"
 				},
 				{
 					caseTitle:"TODO待办事项",

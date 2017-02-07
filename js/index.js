@@ -21,7 +21,7 @@ setTimeout(function(){
 			
 		}
 //		dataShow(260,80,270,1000,"#ffff00");
-	},1500)
+	},1800)
 
 function circles(start,end) {
 //	console.log(ctx);
@@ -224,6 +224,10 @@ let vm = new Vue({
 	},
 	methods: {
 		showDetail: function(item) {
+			//把滚动条以及内容区移到顶部
+			$('.demo_detail .barDiv').css("top",0);
+			$('.demo_detail .demoDesc').css("top",0);
+// --------
 			this.currentCaseObj = item;
 			
 			this.$nextTick(function() {

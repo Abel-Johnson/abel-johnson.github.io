@@ -14,9 +14,9 @@ var skillLis = {
 		language:"CSS",
 		percent:"95%",
 		tips:[
-			"CSS3圆角阴影字体等样式有实际案例经验",
 			"掌握移动端/响应式/弹性盒模型flex等多终端适配解决方法",
-			"使用合适的结构编写兼容主流浏览器的页面布局(模仿过携程[三屏页面],QQ音乐等大型网站的静态页面)"
+			"使用合适的结构编写兼容主流浏览器的页面布局(模仿过携程[三屏页面],QQ音乐等大型网站的静态页面)",
+			"熟练使用第三方字体库,如font-awesome等"
 		]
 	},
 	{
@@ -28,17 +28,25 @@ var skillLis = {
 			"深入使用DOM\BOM，能完成各类组件开发",
 			"掌握JS的数据调用、ajax实现机制、各类接口调用",
 			"掌握面向对象编程，对封装、继承、多态等均有了解",
-			"了解正则表达式，熟悉JS兼容性、JS性能提升",
+			"熟悉正则表达式，熟悉JS兼容性、JS性能提升",
 			"熟练掌握原生js,能够脱离jQuery等类库编码",
 			"了解ECMAScript6(2015)的新增语法"
 		]
 	},
+	// {
+	// 	language:"Canvas",
+	// 	percent:"70%",
+	// 	tips:[
+	// 		"能熟练配合js使用相关接口绘制各类图形",
+	// 		"能运用canvas开发小游戏"
+	// 	]
+	// },
 	{
-		language:"Canvas",
-		percent:"70%",
+		language:"Git",
+		percent:"75%",
 		tips:[
-			"能熟练配合js使用相关接口绘制各类图形",
-			"能运用canvas开发小游戏"
+			"能熟练使用git的各种指令完成项目合作,版本控制",
+			"有自己的github,存放项目,博客"
 		]
 	},
 	{
@@ -59,14 +67,6 @@ var skillLis = {
 		]
 	},
 	{
-		language:"Java",
-		percent:"60%",
-		tips:[
-			"了解一些后端语言Java",
-			"了解一定的移动端Android开发知识"
-		]
-	},
-	{
 		language:"Node.js",
 		percent:"70%",
 		tips:[
@@ -79,231 +79,153 @@ var skillLis = {
 		tips:[
 			"能够使用各种打包工具"
 		]
+	},
+	{
+		language:"Java",
+		percent:"60%",
+		tips:[
+			"有一定的后端语言Java基础",
+			"了解一定的移动端Android开发知识"
+		]
 	}
-
 	]
 }
 
 
 var cases = [
 		{
-			caseName:"event",
+			caseName:"CSS酷炫效果",
 			caseList:[
 				{
-					caseTitle:"手风琴",
+					caseTitle:"图片破碎还原",
 					publishTime:"2016-09-26",
-					caseThumbnail:"images/case/1/1-JS热身课程-课后练习.gif",
-					caseDescription:"用到了事件的知识点用到了事件的知识点用到了事件的知识点用到了事件的知识点用到了事件的知识点",
-					caseWebsite:"cases/event/shoufengqin/手风琴.html"
+					caseThumbnail:"img/case/posui.png",
+					caseDescription:"功能:点击图片破碎,再次点击还原的同时切换图片\
+					技术要点:使用10x10定位布局;运用preserve-3d,景深,以及各种3D变换(旋转.斜切等);使用Math.radom计算出随机的变换角度",
+					caseWebsite:"https://abel-johnson.github.io/CSSX-suipian/"
 				},
 				{
-					caseTitle:"zhaopianqiang",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/case/1/2-模拟手机短信发送.gif",
-					caseDescription:"描述：这是我完成的一个小案例，综合涉及到的知识点是判断、字符串拼接，以及布局方面的小技巧，比如提交留言后，A用户在左，B用户在右"
-					,caseWebsite:"http:www.miaov.com"
+					caseTitle:"图片3D旋转切换",
+					publishTime:"2016-8-10",
+					caseThumbnail:"img/case/DEMO-3Dalbum.png",
+					caseDescription:"功能:点击对应按钮切换图片时,图片会以螺旋状依次旋转,最终达到切换到新图片的效果",
+					caseWebsite:"https://abel-johnson.github.io/Demos/DEMO-3Dalbum/"
+				},
+				{
+					caseTitle:"文字3D折叠",
+					publishTime:"2016-8-4",
+					caseThumbnail:"img/case/specialLetter.png.png",
+					caseDescription:"功能:鼠标划过时文字会折叠到底下的槽里,充分用到了3D变换,配合transition,配合自定义属性实现",
+					caseWebsite:"https://abel-johnson.github.io/Demos/3DspecialLetter/"
 				}
 			]
 		},
 		{
-			caseName:"for应用this关键字",
+			caseName:"响应式",
 			caseList:[
 				{
-					caseTitle:"上下移动",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/icon/exp.png",
-					caseDescription:"浏览器<br/>可以被<br/>认为浏<br/>览<br/>器<br/>可<br/>以<br/>浏览器<br/>可以被<br/"
-					,caseWebsite:"http:www.miaov.com"
+					caseTitle:"仿LE响应式布局",
+					publishTime:"2016-7-10 22:08",
+					caseThumbnail:"img/case/LE.png",
+					caseDescription:"仿LE响应式三档布局,技术要点:响应式布局;内容列表部分使用了弹性盒模型flex"
+					,caseWebsite:"https://abel-johnson.github.io/LEresp/"
 				},
-				{
-					caseTitle:"切换来去",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"http://jquery.com/jquery-wp-content/themes/jquery.com/i/try-jquery.jpg",
-					caseDescription:"浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认"
-					,caseWebsite:"http:www.miaov.com"
-				},
-				{
-					caseTitle:"切换来去",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"http://jquerymobile.com/resources/devices.png",
-					caseDescription:"为浏览器可以被认为浏览器可以被认为 浏览器可以被认为浏览器可以被认为"
-					,caseWebsite:"http:www.miaov.com"
-				},{
-					caseTitle:"上下移动",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"https://avatars1.githubusercontent.com/u/6025224?v=3&s=400",
-					caseDescription:"浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为 浏览器可以被认为浏览器可以被认为"
-					,caseWebsite:"http:www.miaov.com"
-				},
-				{
-					caseTitle:"切换来去",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/icon/exp.png",
-					caseDescription:"认为浏览器可以被认 为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可 以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为 浏览器可以被认为浏览器可以被认为"
-					,caseWebsite:"http:www.miaov.com"
-				},{
-					caseTitle:"上下移动",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/icon/exp.png",
-					caseDescription:"浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认 为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可 以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为 浏览器可以被认为浏览器可以被认为"
-					,caseWebsite:"http:www.miaov.com"
-				},
-				{
-					caseTitle:"切换来去",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/icon/exp.png",
-					caseDescription:"认为浏览器可以被认为浏览器可以被认为浏览器可 以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为 浏览器可以被认为浏览器可以被认为"
-					,caseWebsite:"http:www.miaov.com"
-				},{
-					caseTitle:"上下移动",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/icon/exp.png",
-					caseDescription:"览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为 浏览器可以被认为浏览器可以被认为"
-					,caseWebsite:"http:www.miaov.com"
-				},
-				{
-					caseTitle:"切换来去",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/icon/exp.png",
-					caseDescription:"为浏览器可以被认 为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可 以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为 浏览器可以被认为浏览器可以被认为"
-					,caseWebsite:"http:www.miaov.com"
-				}
 			]
 		},{
-			caseName:"自定义属性、索引值",
+			caseName:"移动端",
 			caseList:[
 				{
-					caseTitle:"图片轮播图1",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/icon/exp.png",
-					caseDescription:" liulanqi 以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为 浏览器可以被认为浏览器可以被认为"
-					,caseWebsite:"http:www.miaov.com"
+					caseTitle:"仿微博移动端",
+					publishTime:"2016-9-10",
+					caseThumbnail:"img/case/weibo-mobile.png",
+					caseDescription:" 描述:两屏的微博移动端,加入了一些动画;技术要点:定时器;自定义字体;rem字体单位,以便适用于不同屏幕;使用了预编译语言less(通过Koala编译);"
+					,caseWebsite:"https://abel-johnson.github.io/mobile-weibo/"
 
 				},
 				{
-					caseTitle:"图片轮播图2",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/icon/exp.png",
-					caseDescription:"浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认 为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可 以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为 浏览器可以被认为浏览器可以被认为"
-					,caseWebsite:"http:www.miaov.com",
+					caseTitle:"苏宁移动端",
+					publishTime:"2016-9-2",
+					caseThumbnail:"img/case/suning.png",
+					caseDescription:" 描述:仿苏宁移动端,使用了定时器实现轮播图;"
+					,caseWebsite:"https://abel-johnson.github.io/Demos/mobile_suning"
 
+				},
+				{
+					caseTitle:"携程移动端",
+					publishTime:"2016-8-10",
+					caseThumbnail:"img/case/ctrip-M.png",
+					caseDescription:" 描述:仿携程移动端"
+					,caseWebsite:"https://abel-johnson.github.io/Demos/mobile_ctrip"
 				}
 			]
 		},
 		{
-			caseName:"JS数据类型、类型转换",
+			caseName:"日期对象",
 			caseList:[
 				{
-					caseTitle:"上下移动",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/icon/exp.png",
-					caseDescription:"浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认 为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可 以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为 浏览器可以被认为浏览器可以被认为"
-					,caseWebsite:"http:www.miaov.com"
+					caseTitle:"多功能钟表",
+					publishTime:"2016-8-16",
+					caseThumbnail:"img/case/Muti-clock.png",
+					caseDescription:"基本功能: ;指针指示当前时间;秒表计时(有start,stop以及reset三个按钮);显示当前是星期几;显示当前日期;技术要点:2D旋转;定位的相关知识;		"			,caseWebsite:"https://abel-johnson.github.io/multifunctional-clock/"
 				},
 				{
-					caseTitle:"切换来去",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/icon/exp.png",
-					caseDescription:"浏浏览器可以被认为浏览器可以被认为浏览器可 以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为 浏览器可以被认为浏览器可以被认为"
-					,caseWebsite:"http:www.miaov.com"
+					caseTitle:"模拟数字时钟",
+					publishTime:"2016-10-16",
+					caseThumbnail:"img/case/digitalClock.png",
+					caseDescription:"通过运动函数,定时器达到滚动切换的效果"			,caseWebsite:"https://abel-johnson.github.io/Demos/digital_clock/"
 				}
 			]
 		},{
-			caseName:"函数传参、重用、价格计算",
+			caseName:"大型网站",
 			caseList:[
 				{
-					caseTitle:"图片轮播图1",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/icon/exp.png",
-					caseDescription:" liulanqi 以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为 浏览器可以被认为浏览器可以被认为"
-					,caseWebsite:"http:www.miaov.com"
+					caseTitle:"仿携程(三屏页面)",
+					publishTime:"2016-7-10",
+					caseThumbnail:"img/case/ctrip-pc.png",
+					caseDescription:"项目描述:包括携程首页,酒店,机票(3屏),根据网站截图,从切图到布局独立完成.技术要点: 使用大量语义化标签,解决了IE6的兼容性问题",caseWebsite:"https://abel-johnson.github.io/Ctrip-PC/html/"
 
 				},
 				{
-					caseTitle:"图片轮播图2",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/icon/exp.png",
-					caseDescription:"浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认 为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可 以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为 浏览器可以被认为浏览器可以被认为"
-					,caseWebsite:"http:www.miaov.com",
-
+					caseTitle:"QQ音乐首页",
+					publishTime:"2016-6-20",
+					caseThumbnail:"img/case/qqmusic.png",
+					caseDescription:"布局兼容IE6"
+					,caseWebsite:"https://abel-johnson.github.io/Demos/QQmusic/"
 				}
 			]
 		},
 		{
-			caseName:"运算符流程控制",
+			caseName:"3D",
 			caseList:[
 				{
-					caseTitle:"上下移动",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/icon/exp.png",
-					caseDescription:"浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认 为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可 以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为 浏览器可以被认为浏览器可以被认为"
-					,caseWebsite:"http:www.miaov.com"
-				},
-				{
-					caseTitle:"切换来去",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/icon/exp.png",
-					caseDescription:"为浏览器可以被认为浏览器可以被认为浏览器可 以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为 浏览器可以被认为浏览器可以被认为"
-					,caseWebsite:"http:www.miaov.com"
-				}
-			]
-		},{
-			caseName:"定时器管理、函数封装",
-			caseList:[
-				{
-					caseTitle:"图片轮播图1",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/icon/exp.png",
-					caseDescription:" liulanqi 以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为 浏览器可以被认为浏览器可以被认为"
-					,caseWebsite:"http:www.miaov.com"
-
-				},
-				{
-					caseTitle:"图片轮播图2",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/icon/exp.png",
-					caseDescription:"浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认 为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可 以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为 浏览器可以被认为浏览器可以被认为"
-					,caseWebsite:"http:www.miaov.com",
-
+					caseTitle:"锤子官网特效",
+					publishTime:"2016-11-16",
+					caseThumbnail:"img/case/t.tt.png",
+					caseDescription:"视差效果,根据光标移动距离改变显示"
+					,caseWebsite:"https://abel-johnson.github.io/Demos/t.tt_Module"
 				}
 			]
 		},
 		{
-			caseName:"日期对象、时钟倒计时",
+			caseName:"大型功能类web应用",
 			caseList:[
 				{
-					caseTitle:"上下移动",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/icon/exp.png",
-					caseDescription:"浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认 为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可 以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为 浏览器可以被认为浏览器可以被认为"
-					,caseWebsite:"http:www.miaov.com"
-				},
-				{
-					caseTitle:"切换来去",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/icon/exp.png",
-					caseDescription:"浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认 为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可 以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为浏览器可以被认为 浏览器可以被认为浏览器可以被认为"
-					,caseWebsite:"http:www.miaov.com"
+					caseTitle:"仿云盘",
+					publishTime:"2016-12-10",
+					caseThumbnail:"img/case/weiyun.png",
+					caseDescription:"实现大部分常见功能"
+					,caseWebsite:"https://abel-johnson.github.io/weiyun/"
 				}
 			]
 		},{
-			caseName:"字符串、查找高亮显示",
+			caseName:"中型web应用",
 			caseList:[
 				{
-					caseTitle:"消除表情小游戏",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/case/1/消除表情小游戏.png",
-					caseDescription:"这是一个综合小练习，是运用JS的相关方法以及一些逻辑来实现的小游戏，可玩性极高哦~"
-					,caseWebsite:"http://bbs.miaov.com/online_class/JS1-lesson-gif/JS37.html"
-
-				},
-				{
-					caseTitle:"排序实例",
-					publishTime:"2011-11-16 22:08",
-					caseThumbnail:"images/case/1/排序.png",
-					caseDescription:"数组的方法sort实在妙不可言，通过各种小案例来达到令人满意的效果，也是学以致用的一种体验。"
-					,caseWebsite:"http://bbs.miaov.com/online_class/JS1-lesson-gif/JS38.png",
-
+					caseTitle:"TODO待办事项",
+					publishTime:"2016-12-20 22:08",
+					caseThumbnail:"img/case/todo.png",
+					caseDescription:"使用Vue实现"
+					,caseWebsite:"https://abel-johnson.github.io/TODO/"
 				}
 			]
 		}
@@ -311,21 +233,21 @@ var cases = [
 
 var projects = [
 		{
-			projectName:"整屏切换+动画制作“TweenMax库”",
+			projectName:"仿云盘",
 			projectWebsite:"",
-		    startTime:"2016.01.01",
-			endTime:"至今",
-			projectExplain:"JS整站开发之：整屏切换+动画制作神器“TweenMax库” 导航条和首屏出场动画、3D翻转实现、整屏切换，页面动画计算滚动条滚动距离， 拖动滚动条触发页面动画，完善每一屏内的图片翻转，缩小浏览器，做布局转换。",
-			projectLabel:["html","css3","css","js"],
-			projectThumbnail:"images/icon/1.png"
+		    startTime:"2016.12.10",
+			endTime:"2016.12.20",
+			projectExplain:"原生Javascript编写,实现了:基本的三栏同步(即左侧树形菜单,面包屑导航和内容区),多选,全选,鼠标框选,重命名,批量删除,新建文件夹,批量移动,操作状态弹框,实现了市面上网盘的大部分功能",
+				projectLabel:["html","css3","css","js"],
+			projectThumbnail:"img/case/weiyun.png"
 		},
 		{
-			projectName:"xxx",
+			projectName:"TODO待办事项",
 			projectWebsite:"",
-		    startTime:"2016.01.01",
-			endTime:"至今",
-			projectExplain:"用户观看视频的主页面，其大部分内容是通过JS加载的。为了提高性能，采用了延迟加载、延迟渲染、事件代理等优化方式。此外，还通过监听页面的window.onerror事件对异常信息进行采集，以便及时发现和排查故障。",
+		    startTime:"2016.12.20",
+			endTime:"2016.12.24",
+			projectExplain:"技术要点:使用Vue编写,实现了事项列表的增,删,改,查,通过localStorage在本地存储数据,实现了关闭浏览器再次打开,列表的状态依然保留,通过修改hash值,配合onhashchange函数实现了3种状态切换时的显示变化",
 			projectLabel:["html","css3","css","js"],
-			projectThumbnail:"images/icon/project-2.png"
+			projectThumbnail:"img/case/todo.png"
 		}
 ]

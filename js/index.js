@@ -12,8 +12,9 @@ var colorArr = ['#e26c60', '#b93d5f', '#985a99', '#4b4b9c', '#0987c2', '#09c0c2'
 
 //circles(0,2*Math.PI);
 //动画生成同心圆
-prepare(100, -90, 3)
+$(function(){prepare(100, -90, 3)
 setTimeout(function(){
+	ctx.lineWidth = 26;
 		for (var i = 0; i < skillArr.length; i++) {
 			console.log("xxx",i);
 			console.log(colorArr)
@@ -21,7 +22,7 @@ setTimeout(function(){
 			
 		}
 //		dataShow(260,80,270,1000,"#ffff00");
-	},1800)
+	},1800)})
 
 function circles(start,end) {
 //	console.log(ctx);

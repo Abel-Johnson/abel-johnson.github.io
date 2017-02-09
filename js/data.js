@@ -253,7 +253,7 @@ var projects = [
 			projectWebsite:"https://abel-johnson.github.io/weiyun/",
 		    startTime:"2016.12.20",
 			endTime:"2017.1.10",
-			projectExplain:"原生Javascript编写,实现了:基本的三栏同步(即左侧树形菜单,面包屑导航和内容区),多选,全选,鼠标框选,重命名,批量删除,新建文件夹,批量移动,操作状态弹框,实现了市面上网盘的大部分功能",
+			projectExplain:"技术要点: 原生JavaScript编写,面向过程编程;封装了通用的弹框dialog.js组件,提高了代码复用性;使用了ES6的形如`${}`的超级字符串;构造了一套伪数据,一定程度模拟了开发环境,实现了数据与表现同步",
 				projectLabel:["html","css3","css","js"],
 			projectThumbnail:"img/case/weiyun.png"
 		}

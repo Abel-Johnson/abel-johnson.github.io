@@ -96,6 +96,15 @@ var cases = [
 		{
 			caseName:"CSS+JS效果",
 			caseList:[
+
+
+				{
+					caseTitle:"瀑布流",
+					publishTime:"2016-6-4",
+					caseThumbnail:"img/case/pubuliu.png",
+					caseDescription:"功能:网上找到一个可以向别的网站请求大量图片的php文件,解决了跨域的问题,然后使用AJAX动态请求JSON数据,填充页面,实现了瀑布流和懒加载",
+					caseWebsite:"https://github.com/Abel-Johnson/Demos/tree/master/pubuliuAjax"
+				},
 				{
 					caseTitle:"网站上常见的几种焦点图",
 					publishTime:"2016-6-4",
@@ -176,18 +185,6 @@ var cases = [
 		{
 			caseName:"日期对象",
 			caseList:[
-				{
-					caseTitle:"多功能钟表",
-					publishTime:"2016-8-16",
-					caseThumbnail:"img/case/Muti-clock.png",
-					caseDescription:"基本功能: ;指针指示当前时间;秒表计时(有start,stop以及reset三个按钮);显示当前是星期几;显示当前日期;技术要点:2D旋转;定位的相关知识;		"			,caseWebsite:"https://abel-johnson.github.io/multifunctional-clock/"
-				},
-				{
-					caseTitle:"模拟数字时钟",
-					publishTime:"2016-10-16",
-					caseThumbnail:"img/case/digitalClock.png",
-					caseDescription:"通过运动函数,定时器达到滚动切换的效果"			,caseWebsite:"https://abel-johnson.github.io/Demos/digital_clock/"
-				}
 			]
 		},{
 			caseName:"大型PC网站",
@@ -212,12 +209,26 @@ var cases = [
 		{
 			caseName:"小组件",
 			caseList:[
+
 				{
-					caseTitle:"锤子官网特效",
-					publishTime:"2016-11-16",
-					caseThumbnail:"img/case/t.tt.png",
-					caseDescription:"视差效果,根据光标移动距离改变显示"
-					,caseWebsite:"https://abel-johnson.github.io/Demos/t.tt_Module"
+					caseTitle:"多功能钟表",
+					publishTime:"2016-8-16",
+					caseThumbnail:"img/case/Muti-clock.png",
+					caseDescription:"基本功能: ;指针指示当前时间;秒表计时(有start,stop以及reset三个按钮);显示当前是星期几;显示当前日期;技术要点:2D旋转;定位的相关知识;		"			,caseWebsite:"https://abel-johnson.github.io/multifunctional-clock/"
+				},
+				{
+					caseTitle:"自定义H5视频播放器",
+					publishTime:"2016-3-10",
+					caseThumbnail:"img/case/videoPlayer.png",
+					caseDescription:"结合h5的<video>标签提供的而诸如play(),pause()等API,配合bootstrap,实现了自定义美化播放控件,并实现了对应的(诸如进度条,滚轮调节音量,全屏等的)功能"
+					,caseWebsite:"https://abel-johnson.github.io/Demos/videoPlayer"
+				},
+				{
+					caseTitle:"模拟数字时钟",
+					publishTime:"2016-10-16",
+					caseThumbnail:"img/case/digitalClock.png",
+					caseDescription:"通过运动函数,定时器达到滚动切换的效果",	
+					caseWebsite:"https://abel-johnson.github.io/Demos/digital_clock/"
 				}
 			]
 		},

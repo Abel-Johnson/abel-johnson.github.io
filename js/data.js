@@ -94,8 +94,15 @@ var skillLis = {
 
 var cases = [
 		{
-			caseName:"CSS酷炫效果",
+			caseName:"CSS+JS效果",
 			caseList:[
+				{
+					caseTitle:"网站上常见的几种焦点图",
+					publishTime:"2016-6-4",
+					caseThumbnail:"img/case/focusPlay.png",
+					caseDescription:"功能:根据市面上常见的9种广告焦点图的效果(包括轮播,淡入淡出,手风琴等效果),代码实现(网址只链接到了其中一个,更多请到我的github仓库查看:github.com/Abel-Johnson/Demos/tree/master/9种常见轮播图)",
+					caseWebsite:"https://abel-johnson.github.io/Demos/9种常见轮播图/index.html"
+				},
 				{
 					caseTitle:"图片破碎还原",
 					publishTime:"2016-09-26",
@@ -112,18 +119,18 @@ var cases = [
 					caseWebsite:"https://abel-johnson.github.io/Demos/DEMO-3Dalbum/"
 				},
 				{
+					caseTitle:"锤子官网特效",
+					publishTime:"2016-11-16",
+					caseThumbnail:"img/case/t.tt.png",
+					caseDescription:"视差效果,根据光标移动距离改变显示"
+					,caseWebsite:"https://abel-johnson.github.io/Demos/t.tt_Module"
+				},
+				{
 					caseTitle:"文字3D折叠",
 					publishTime:"2016-8-4",
 					caseThumbnail:"img/case/specialLetter.png",
 					caseDescription:"功能:鼠标划过时文字会折叠到底下的槽里,充分用到了3D变换,配合transition,配合自定义属性实现",
 					caseWebsite:"https://abel-johnson.github.io/Demos/3DspecialLetter/"
-				},
-				{
-					caseTitle:"网站上常见的几种焦点图",
-					publishTime:"2016-6-4",
-					caseThumbnail:"img/case/focusPlay.png",
-					caseDescription:"功能:根据市面上常见的8种广告焦点图的效果(包括轮播,淡入淡出,手风琴等效果),代码实现(网址只链接到了其中一个,更多请到)",
-					caseWebsite:"https://abel-johnson.github.io/Demos/9种常见轮播图/"
 				}
 			]
 		},
@@ -183,13 +190,14 @@ var cases = [
 				}
 			]
 		},{
-			caseName:"大型网站",
+			caseName:"大型PC网站",
 			caseList:[
 				{
 					caseTitle:"仿携程(三屏页面)",
 					publishTime:"2016-7-10",
 					caseThumbnail:"img/case/ctrip-pc.png",
-					caseDescription:"项目描述:包括携程首页,酒店,机票(3屏),根据网站截图,从切图到布局独立完成.技术要点: 使用大量语义化标签,解决了IE6的兼容性问题",caseWebsite:"https://abel-johnson.github.io/Ctrip-PC/html/"
+					caseDescription:"项目描述:包括携程首页,酒店,机票(3屏),根据网站截图,从切图到布局独立完成.技术要点: 使用大量语义化标签,解决了IE6的兼容性问题",
+					caseWebsite:"https://abel-johnson.github.io/Ctrip-PC/html/"
 
 				},
 				{
@@ -202,7 +210,7 @@ var cases = [
 			]
 		},
 		{
-			caseName:"3D",
+			caseName:"小组件",
 			caseList:[
 				{
 					caseTitle:"锤子官网特效",
@@ -210,6 +218,32 @@ var cases = [
 					caseThumbnail:"img/case/t.tt.png",
 					caseDescription:"视差效果,根据光标移动距离改变显示"
 					,caseWebsite:"https://abel-johnson.github.io/Demos/t.tt_Module"
+				}
+			]
+		},
+		{
+			caseName:"H5小游戏开发",
+			caseList:[
+				{
+					caseTitle:"贪吃蛇",
+					publishTime:"2016-5-10",
+					caseThumbnail:"img/case/snack.png",
+					caseDescription:"通过数组实时存放蛇的坐标位置,并根据该数组进行渲染,配合键盘事件对象event的keycode属性,判断键盘按下的键位,实现了蛇的移动"
+					,caseWebsite:"https://abel-johnson.github.io/Demos/snack"
+				},
+				{
+					caseTitle:"canvas祖玛",
+					publishTime:"2016-7-10",
+					caseThumbnail:"img/case/zuma.png",
+					caseDescription:"纯canvas绘制而成,简易版"
+					,caseWebsite:"https://abel-johnson.github.io/Demos/zuma"
+				},
+				{
+					caseTitle:"物理足球",
+					publishTime:"2016-3-10",
+					caseThumbnail:"img/case/soccer.jpg",
+					caseDescription:"使用常用的鼠标的三个事件(按下,移动,抬起)实现鼠标拽着足球跑,下落用定时器模拟了重力加速度,弹起时给了0.75的系数使速度衰减,而且碰到可视窗口边框也会常规反弹,完全模拟了物理效果"
+					,caseWebsite:"https://abel-johnson.github.io/Demos/soccer"
 				}
 			]
 		},
@@ -224,7 +258,8 @@ var cases = [
 					,caseWebsite:"https://abel-johnson.github.io/weiyun/"
 				}
 			]
-		},{
+		},
+		{
 			caseName:"中型web应用",
 			caseList:[
 				{

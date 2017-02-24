@@ -94,24 +94,138 @@ var skillLis = {
 
 var cases = [
 		{
-			caseName:"CSS+JS效果",
+			caseName:"大型PC网站",
 			caseList:[
+				{
+					caseTitle:"仿携程(三屏页面)",
+					publishTime:"2016-7-10",
+					caseThumbnail:"img/case/ctrip-pc.png",
+					caseDescription:"项目描述:包括携程首页,酒店,机票(3屏),根据网站截图,从切图到布局独立完成.技术要点: 使用大量语义化标签,解决了IE6的兼容性问题",
+					caseWebsite:"https://abel-johnson.github.io/Ctrip-PC/html/"
 
+				},
+
+				{
+					caseTitle:"仿LE响应式布局",
+					publishTime:"2016-7-10 22:08",
+					caseThumbnail:"img/case/LE.png",
+					caseDescription:"仿LE响应式三档布局,技术要点:响应式布局;内容列表部分使用了弹性盒模型flex"
+					,caseWebsite:"https://abel-johnson.github.io/LEresp/"
+				},
+				{
+					caseTitle:"QQ音乐首页",
+					publishTime:"2016-6-20",
+					caseThumbnail:"img/case/qqmusic.png",
+					caseDescription:"布局兼容IE6"
+					,caseWebsite:"https://abel-johnson.github.io/Demos/QQmusic/"
+				}
+			]
+		},
+		{
+			caseName:"小组件",
+			caseList:[
 
 				{
 					caseTitle:"瀑布流",
 					publishTime:"2016-6-4",
 					caseThumbnail:"img/case/pubuliu.png",
-					caseDescription:"功能:网上找到一个可以向别的网站请求大量图片的php文件,解决了跨域的问题,然后使用AJAX动态请求JSON数据,填充页面,实现了瀑布流和懒加载",
+					caseDescription:"介绍:网上找到一个可以向别的网站请求大量图片的php文件,解决了跨域的问题,然后使用AJAX动态请求JSON数据,填充页面,实现了瀑布流和懒加载(因为要依赖后端环境,所以没有在线预览/(ㄒoㄒ)/~~)",
 					caseWebsite:"https://github.com/Abel-Johnson/Demos/tree/master/pubuliuAjax"
 				},
 				{
-					caseTitle:"网站上常见的几种焦点图",
+					caseTitle:"自定义H5视频播放器",
+					publishTime:"2016-3-10",
+					caseThumbnail:"img/case/videoPlayer.png",
+					caseDescription:"结合h5的<video>标签提供的而诸如play(),pause()等API,配合bootstrap,实现了自定义美化播放控件,并实现了对应的(诸如进度条,滚轮调节音量,全屏等的)功能"
+					,caseWebsite:"https://abel-johnson.github.io/Demos/videoPlayer"
+				},
+
+				{
+					caseTitle:"网站上常见的几种焦点图实现",
 					publishTime:"2016-6-4",
 					caseThumbnail:"img/case/focusPlay.png",
 					caseDescription:"功能:根据市面上常见的9种广告焦点图的效果(包括轮播,淡入淡出,手风琴等效果),代码实现(网址只链接到了其中一个,更多请到我的github仓库查看:github.com/Abel-Johnson/Demos/tree/master/9种常见轮播图)",
 					caseWebsite:"https://abel-johnson.github.io/Demos/9种常见轮播图/index.html"
+				}
+			]
+		},
+
+		{
+			caseName:"日期对象",
+			caseList:[
+				{
+					caseTitle:"多功能钟表",
+					publishTime:"2016-8-16",
+					caseThumbnail:"img/case/Muti-clock.png",
+					caseDescription:"基本功能: ;指针指示当前时间;秒表计时(有start,stop以及reset三个按钮);显示当前是星期几;显示当前日期;技术要点:2D旋转;定位的相关知识;		"			,caseWebsite:"https://abel-johnson.github.io/multifunctional-clock/"
 				},
+				{
+					caseTitle:"模拟数字时钟",
+					publishTime:"2016-10-16",
+					caseThumbnail:"img/case/digitalClock.png",
+					caseDescription:"通过运动函数,定时器达到滚动切换的效果",	
+					caseWebsite:"https://abel-johnson.github.io/Demos/digital_clock/"
+				}
+			]
+		},
+		{
+			caseName:"H5移动端",
+			caseList:[
+				{
+					caseTitle:"仿微博移动端",
+					publishTime:"2016-9-10",
+					caseThumbnail:"img/case/weibo-mobile.png",
+					caseDescription:" 描述:两屏的微博移动端,加入了一些动画;技术要点:定时器;自定义字体;rem字体单位,以便适用于不同屏幕;使用了预编译语言less(通过Koala编译);"
+					,caseWebsite:"https://abel-johnson.github.io/mobile-weibo/"
+
+				},
+				{
+					caseTitle:"苏宁移动端",
+					publishTime:"2016-9-2",
+					caseThumbnail:"img/case/suning.png",
+					caseDescription:" 描述:仿苏宁移动端,使用了定时器实现轮播图;"
+					,caseWebsite:"https://abel-johnson.github.io/Demos/mobile_suning"
+
+				},
+				{
+					caseTitle:"携程移动端",
+					publishTime:"2016-8-10",
+					caseThumbnail:"img/case/ctrip-M.png",
+					caseDescription:" 描述:仿携程移动端"
+					,caseWebsite:"https://abel-johnson.github.io/Demos/mobile_ctrip"
+				}
+			]
+		},
+		{
+			caseName:"小游戏",
+			caseList:[
+				{
+					caseTitle:"贪吃蛇",
+					publishTime:"2016-5-10",
+					caseThumbnail:"img/case/snack.png",
+					caseDescription:"通过数组实时存放蛇的坐标位置,并根据该数组进行渲染,配合键盘事件对象event的keycode属性,判断键盘按下的键位,实现了蛇的移动"
+					,caseWebsite:"https://abel-johnson.github.io/Demos/snack"
+				},
+				{
+					caseTitle:"canvas祖玛",
+					publishTime:"2016-7-10",
+					caseThumbnail:"img/case/zuma.png",
+					caseDescription:"纯canvas绘制而成,简易版"
+					,caseWebsite:"https://abel-johnson.github.io/Demos/zuma"
+				},
+				{
+					caseTitle:"物理足球",
+					publishTime:"2016-3-10",
+					caseThumbnail:"img/case/soccer.jpg",
+					caseDescription:"使用常用的鼠标的三个事件(按下,移动,抬起)实现鼠标拽着足球跑,下落用定时器模拟了重力加速度,弹起时给了0.75的系数使速度衰减,而且碰到可视窗口边框也会常规反弹,完全模拟了物理效果"
+					,caseWebsite:"https://abel-johnson.github.io/Demos/soccer"
+				}
+			]
+		},
+
+		{
+			caseName:"CSS+JS效果",
+			caseList:[
 				{
 					caseTitle:"图片破碎还原",
 					publishTime:"2016-09-26",
@@ -144,133 +258,6 @@ var cases = [
 			]
 		},
 		{
-			caseName:"响应式",
-			caseList:[
-				{
-					caseTitle:"仿LE响应式布局",
-					publishTime:"2016-7-10 22:08",
-					caseThumbnail:"img/case/LE.png",
-					caseDescription:"仿LE响应式三档布局,技术要点:响应式布局;内容列表部分使用了弹性盒模型flex"
-					,caseWebsite:"https://abel-johnson.github.io/LEresp/"
-				},
-			]
-		},{
-			caseName:"移动端",
-			caseList:[
-				{
-					caseTitle:"仿微博移动端",
-					publishTime:"2016-9-10",
-					caseThumbnail:"img/case/weibo-mobile.png",
-					caseDescription:" 描述:两屏的微博移动端,加入了一些动画;技术要点:定时器;自定义字体;rem字体单位,以便适用于不同屏幕;使用了预编译语言less(通过Koala编译);"
-					,caseWebsite:"https://abel-johnson.github.io/mobile-weibo/"
-
-				},
-				{
-					caseTitle:"苏宁移动端",
-					publishTime:"2016-9-2",
-					caseThumbnail:"img/case/suning.png",
-					caseDescription:" 描述:仿苏宁移动端,使用了定时器实现轮播图;"
-					,caseWebsite:"https://abel-johnson.github.io/Demos/mobile_suning"
-
-				},
-				{
-					caseTitle:"携程移动端",
-					publishTime:"2016-8-10",
-					caseThumbnail:"img/case/ctrip-M.png",
-					caseDescription:" 描述:仿携程移动端"
-					,caseWebsite:"https://abel-johnson.github.io/Demos/mobile_ctrip"
-				}
-			]
-		},
-		{
-			caseName:"日期对象",
-			caseList:[
-			]
-		},{
-			caseName:"大型PC网站",
-			caseList:[
-				{
-					caseTitle:"仿携程(三屏页面)",
-					publishTime:"2016-7-10",
-					caseThumbnail:"img/case/ctrip-pc.png",
-					caseDescription:"项目描述:包括携程首页,酒店,机票(3屏),根据网站截图,从切图到布局独立完成.技术要点: 使用大量语义化标签,解决了IE6的兼容性问题",
-					caseWebsite:"https://abel-johnson.github.io/Ctrip-PC/html/"
-
-				},
-				{
-					caseTitle:"QQ音乐首页",
-					publishTime:"2016-6-20",
-					caseThumbnail:"img/case/qqmusic.png",
-					caseDescription:"布局兼容IE6"
-					,caseWebsite:"https://abel-johnson.github.io/Demos/QQmusic/"
-				}
-			]
-		},
-		{
-			caseName:"小组件",
-			caseList:[
-
-				{
-					caseTitle:"多功能钟表",
-					publishTime:"2016-8-16",
-					caseThumbnail:"img/case/Muti-clock.png",
-					caseDescription:"基本功能: ;指针指示当前时间;秒表计时(有start,stop以及reset三个按钮);显示当前是星期几;显示当前日期;技术要点:2D旋转;定位的相关知识;		"			,caseWebsite:"https://abel-johnson.github.io/multifunctional-clock/"
-				},
-				{
-					caseTitle:"自定义H5视频播放器",
-					publishTime:"2016-3-10",
-					caseThumbnail:"img/case/videoPlayer.png",
-					caseDescription:"结合h5的<video>标签提供的而诸如play(),pause()等API,配合bootstrap,实现了自定义美化播放控件,并实现了对应的(诸如进度条,滚轮调节音量,全屏等的)功能"
-					,caseWebsite:"https://abel-johnson.github.io/Demos/videoPlayer"
-				},
-				{
-					caseTitle:"模拟数字时钟",
-					publishTime:"2016-10-16",
-					caseThumbnail:"img/case/digitalClock.png",
-					caseDescription:"通过运动函数,定时器达到滚动切换的效果",	
-					caseWebsite:"https://abel-johnson.github.io/Demos/digital_clock/"
-				}
-			]
-		},
-		{
-			caseName:"H5小游戏开发",
-			caseList:[
-				{
-					caseTitle:"贪吃蛇",
-					publishTime:"2016-5-10",
-					caseThumbnail:"img/case/snack.png",
-					caseDescription:"通过数组实时存放蛇的坐标位置,并根据该数组进行渲染,配合键盘事件对象event的keycode属性,判断键盘按下的键位,实现了蛇的移动"
-					,caseWebsite:"https://abel-johnson.github.io/Demos/snack"
-				},
-				{
-					caseTitle:"canvas祖玛",
-					publishTime:"2016-7-10",
-					caseThumbnail:"img/case/zuma.png",
-					caseDescription:"纯canvas绘制而成,简易版"
-					,caseWebsite:"https://abel-johnson.github.io/Demos/zuma"
-				},
-				{
-					caseTitle:"物理足球",
-					publishTime:"2016-3-10",
-					caseThumbnail:"img/case/soccer.jpg",
-					caseDescription:"使用常用的鼠标的三个事件(按下,移动,抬起)实现鼠标拽着足球跑,下落用定时器模拟了重力加速度,弹起时给了0.75的系数使速度衰减,而且碰到可视窗口边框也会常规反弹,完全模拟了物理效果"
-					,caseWebsite:"https://abel-johnson.github.io/Demos/soccer"
-				}
-			]
-		},
-		{
-			caseName:"大型功能类web应用",
-			caseList:[
-				{
-					caseTitle:"仿云盘",
-					publishTime:"2016-12-10",
-					caseThumbnail:"img/case/weiyun.png",
-					caseDescription:"实现大部分常见功能"
-					,caseWebsite:"https://abel-johnson.github.io/weiyun/"
-				}
-			]
-		},
-		{
 			caseName:"中型web应用",
 			caseList:[
 				{
@@ -288,17 +275,38 @@ var cases = [
 					,caseWebsite:"https://abel-johnson.github.io/TODO/"
 				}
 			]
+		},
+		{
+			caseName:"大型功能类web应用",
+			caseList:[
+				{
+					caseTitle:"仿云盘",
+					publishTime:"2016-12-10",
+					caseThumbnail:"img/case/weiyun.png",
+					caseDescription:"实现大部分常见功能"
+					,caseWebsite:"https://abel-johnson.github.io/weiyun/"
+				}
+			]
 		}
 ]
 
 var projects = [
+		{
+			projectName:"豆瓣书籍",
+			projectWebsite:"https://abel-johnson.github.io/Demos/jsonpDouban/",
+		    startTime:"2016.8.9",
+			endTime:"2016.8.13",
+			projectExplain:"技术要点:利用豆瓣API通过jsonp的途径跨域请求数据,根据返回到的json,渲染内容列表,生成页码;并且在搜索框oninput时实时请求豆瓣服务器获取到搜索建议,渲染到页面中",
+			projectLabel:["html","jsonp","css","js"],
+			projectThumbnail:"img/case/douban.png"
+		},
 		{
 			projectName:"TODO待办事项",
 			projectWebsite:"https://abel-johnson.github.io/TODO/",
 		    startTime:"2016.12.10",
 			endTime:"2016.12.20",
 			projectExplain:"技术要点:使用Vue编写,实现了事项列表的增,删,改,查,通过localStorage在本地存储数据,实现了关闭浏览器再次打开,列表的状态依然保留,通过修改hash值,配合onhashchange函数实现了3种状态切换时的显示变化",
-			projectLabel:["html","css3","css","js"],
+			projectLabel:["html","vue","css3","css","js"],
 			projectThumbnail:"img/case/todo.png"
 		},
 		{

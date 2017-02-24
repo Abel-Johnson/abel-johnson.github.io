@@ -117,6 +117,13 @@ var cases = [
 					caseThumbnail:"img/case/specialLetter.png",
 					caseDescription:"功能:鼠标划过时文字会折叠到底下的槽里,充分用到了3D变换,配合transition,配合自定义属性实现",
 					caseWebsite:"https://abel-johnson.github.io/Demos/3DspecialLetter/"
+				},
+				{
+					caseTitle:"网站上常见的几种焦点图",
+					publishTime:"2016-6-4",
+					caseThumbnail:"img/case/focusPlay.png",
+					caseDescription:"功能:根据市面上常见的8种广告焦点图的效果(包括轮播,淡入淡出,手风琴等效果),代码实现(网址只链接到了其中一个,更多请到)",
+					caseWebsite:"https://abel-johnson.github.io/Demos/9种常见轮播图/"
 				}
 			]
 		},

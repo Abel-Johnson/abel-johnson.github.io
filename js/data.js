@@ -297,7 +297,7 @@ var projects = [
 		    startTime:"2016.8.9",
 			endTime:"2016.8.13",
 			projectExplain:"技术要点:利用豆瓣API通过jsonp的途径跨域请求数据,根据返回到的json,渲染内容列表,生成页码;并且在搜索框oninput时实时请求豆瓣服务器获取到搜索建议,渲染到页面中",
-			projectLabel:["html","jsonp","css","js"],
+			projectLabel:["jsonp","html","css","js"],
 			projectThumbnail:"img/case/douban.png"
 		},
 		{
@@ -306,7 +306,7 @@ var projects = [
 		    startTime:"2016.12.10",
 			endTime:"2016.12.20",
 			projectExplain:"技术要点:使用Vue编写,实现了事项列表的增,删,改,查,通过localStorage在本地存储数据,实现了关闭浏览器再次打开,列表的状态依然保留,通过修改hash值,配合onhashchange函数实现了3种状态切换时的显示变化",
-			projectLabel:["html","vue","css3","css","js"],
+			projectLabel:["html","vue","css","js"],
 			projectThumbnail:"img/case/todo.png"
 		},
 		{
@@ -315,7 +315,7 @@ var projects = [
 		    startTime:"2016.12.20",
 			endTime:"2017.1.10",
 			projectExplain:"技术要点: 原生JavaScript编写,面向过程编程;封装了通用的弹框dialog.js组件,提高了代码复用性;使用了ES6的形如`${}`的超级字符串;构造了一套伪数据,一定程度模拟了开发环境,实现了数据与表现同步",
-				projectLabel:["html","css3","css","js"],
+				projectLabel:["html","css","js"],
 			projectThumbnail:"img/case/weiyun.png"
 		}
 ]

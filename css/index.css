@@ -32,7 +32,15 @@ body {
   height: 100px;
   line-height: 104px;
   font-size: 14px;
+}
+#infoBasic .contactMe li a {
   color: #92929a;
+}
+#infoBasic .contactMe li a:hover {
+  color: lightgray;
+}
+#infoBasic .contactMe li a:hover .fa {
+  border-color: transparent;
 }
 #infoBasic .contactMe .fa {
   font-size: 16px;
@@ -42,16 +50,12 @@ body {
   height: 28px;
   border: 1px solid #756f7b;
   border-radius: 50%;
-  color: #9999a2;
 }
 #infoBasic .contactMe .address_qq {
   float: left;
 }
 #infoBasic .contactMe .address_email {
   float: right;
-}
-#infoBasic .contactMe .address_email a {
-  color: inherit;
 }
 #infoDetail {
   height: 350px;
@@ -70,27 +74,24 @@ body {
   padding-left: 28px;
   position: relative;
 }
-#infoDetail .motto .text:before {
+#infoDetail .motto .text i:first-of-type {
   position: absolute;
-  top: -60px;
   left: 0;
-  font-size: 60px;
-  content: "\“";
-  font-family: "Khmer Sangam MN";
-  line-height: 200px;
   color: #4e5055;
+  line-height: inherit;
+  font-size: 20px;
 }
-#infoDetail .motto .text:after {
-  display: inline-block;
-  vertical-align: top;
-  height: 0;
-  font-size: 60px;
-  line-height: 200px;
-  content: "\”";
-  font-family: "Khmer Sangam MN";
-  margin-top: -60px;
+#infoDetail .motto .text i:last-of-type {
   color: #4e5055;
-  margin-left: 4px;
+  line-height: inherit;
+  font-size: 20px;
+  vertical-align: top;
+}
+#infoDetail .motto .text:hover {
+  color: lightgray;
+}
+#infoDetail .motto .text:hover i {
+  color: #b6bbc0;
 }
 #infoDetail .photo {
   width: 200px;
@@ -118,6 +119,10 @@ body {
   content: '';
   display: block;
   clear: both;
+}
+#infoDetail .infoLs .item:hover dt,
+#infoDetail .infoLs .item:hover dd {
+  color: whitesmoke;
 }
 #infoDetail .infoLs .item {
   font-size: 14px;
@@ -218,6 +223,9 @@ body {
   font-size: 12px;
   line-height: 24px;
   color: #aaacae;
+}
+#abilityShow .ab_content .word .item dd:hover {
+  color: gray;
 }
 #abilityShow .ab_content .word .item dd:before {
   content: '●';
@@ -467,6 +475,9 @@ body {
   padding: 42px 0;
   border-bottom: 1px solid #e88980;
 }
+#projectShow .ps_content .item :hover .summary {
+  color: white;
+}
 #projectShow .ps_content .item .summary {
   float: left;
   width: 550px;
@@ -500,6 +511,7 @@ body {
   border: 1px solid #bc5045;
   border-radius: 2px;
   margin-right: 8px;
+  color: #e4877e;
 }
 #projectShow .ps_content .item .summary .tags span.tag-html {
   color: #b93d5f;
@@ -526,8 +538,6 @@ body {
   height: 100%;
 }
 #pageFoot {
-  background: url('../img/ft_bg2.jpg');
-  background-size: 100%;
   background-color: #eef2f5;
   padding: 30px 0 40px;
   font-size: 14px;

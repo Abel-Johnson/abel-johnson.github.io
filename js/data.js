@@ -33,14 +33,6 @@ var skillLis = {
 			"了解ECMAScript6(2015)的新增语法"
 		]
 	},
-	// {
-	// 	language:"Canvas",
-	// 	percent:"70%",
-	// 	tips:[
-	// 		"能熟练配合js使用相关接口绘制各类图形",
-	// 		"能运用canvas开发小游戏"
-	// 	]
-	// },
 	{
 		language:"Git",
 		percent:"75%",
@@ -88,6 +80,14 @@ var skillLis = {
 			"了解一定的移动端Android开发知识"
 		]
 	}
+	// {
+	// 	language:"Canvas",
+	// 	percent:"70%",
+	// 	tips:[
+	// 		"能熟练配合js使用相关接口绘制各类图形",
+	// 		"能运用canvas开发小游戏"
+	// 	]
+	// }
 	]
 }
 

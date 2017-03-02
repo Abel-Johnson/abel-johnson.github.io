@@ -23,12 +23,11 @@ console.log(skillArr);
 
 
 //circles(0,2*Math.PI);
-//动画生成同心圆
+//canvas动画生成同心圆
 prepare(100, -90, 3)
 setTimeout(dataAnimation,3000)
 	
 function circles(start,end) {
-//	console.log(ctx);
 	ctx.strokeStyle = "#eef2f5";
 	ctx.lineWidth = 2;
 	ctx.moveTo(294,294);
@@ -98,10 +97,7 @@ function circles(start,end) {
 }
 function dataAnimation() {
 	for (var i = 0; i < skillArr.length; i++) {
-			console.log("xxx",i);
-			console.log(colorArr)
 			dataShow(290-30*i,skillArr[i].perc,270,10*skillArr[i].perc,colorArr[i]);
-			
 	}
 }
 
@@ -156,26 +152,6 @@ function dataShow(radius, percent, startDeg, time, colorAttr) {
 		ctx.fill();
 	},10);
 }
-
-
-
-
-
-
-
-// $(document).click(function(){
-// 	console.log("进入");
-// 	setTimeout(function(){
-// 		for (var i = 0; i < skillArr.length; i++) {
-// 			console.log("xxx",i);
-// 			console.log(colorArr)
-// 			dataShow(290-30*i,skillArr[i].perc,270,10*skillArr[i].perc,colorArr[i]);
-			
-// 		}
-// //		dataShow(260,80,270,1000,"#ffff00");
-// 	},1000)
-// });
-
 
 //vue写技能部分
 new Vue({
@@ -253,9 +229,7 @@ let vm = new Vue({
 		imgFinish: function() {
 			console.log("图片加载完毕");
 			var innerObj = vm.$refs['demoDesc'];//获取到渲染完的描述部分
-//				console.log(innerObj);
 				var rateR = $('.container').height()/$(innerObj).outerHeight()
-//				console.log($('.container').height(),$(innerObj).outerHeight(), innerObj.offsetHeight);
 				if(rateR>=1) {
 					sWay.eq(1).hide()
 				} else {
@@ -374,8 +348,6 @@ sDiv.eq(1).on('mousedown', function(ev) {
 	var dis = ev.clientY- $(this).position().top;
 	function mdFn(ev) {
 		//滑块定位
-		
-//		给滑块定位
 		var divTop = ev.clientY-dis;
 		if(divTop<0) divTop = 0;
 		if(divTop>maxDR) divTop = maxDR;
